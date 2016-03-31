@@ -1,0 +1,14 @@
+#!/bin/sh
+rm -rf tags cscope.files cscope.out
+ctags -R
+find . \( -name '*.c' 		\
+		 -o -name '*.cpp'	\
+		 -o -name '*.cc'	\
+		 -o -name '*.h'		\
+		 -o -name '*.s'		\
+		 -o -name '*.S'		\
+		 -o -name '*.spp'	\
+		 -o -name 'SConscript'	\
+		 -o -name '*.py' \)	\
+		 -print > cscope.files
+cscope -i cscope.files

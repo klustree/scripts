@@ -1,0 +1,3 @@
+#!/bin/sh
+echo 'delete tags!!'
+rm -rf tags cscope.files cscope.out
